@@ -1,6 +1,6 @@
 {% set name = "aionotify" %}
-{% set version = "0.2.0" %}
-{% set sha256 = "64b702ad0eb115034533f9f62730a9253b79f5ff0fbf3d100c392124cdf12507" %}
+{% set version = "0.3.0" %}
+{% set sha256 = "e4e5286a9c84a0b4b9e7f7a382589be196878382d6a3d34b3fcaa062cf4d428e" %}
 
 package:
   name: "{{ name|lower }}"
@@ -11,8 +11,8 @@ source:
   sha256: "{{ sha256 }}"
 
 build:
-  number: 1004
-  skip: True  # [not linux or py<34]
+  number: 0
+  skip: true  # [not linux or py<34]
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv "
 
 requirements:
